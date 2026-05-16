@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2026-05-16 00:00:00">
+
+  <!-- x_aasl_launchpad_run -->
+  <sys_db_object action="INSERT_OR_UPDATE">
+    <name>x_aasl_launchpad_run</name>
+    <label>Launchpad Run</label>
+    <extends_table>task</extends_table>
+    <namespace>x_aasl</namespace>
+    <create_access_controls>true</create_access_controls>
+    <is_extendable>false</is_extendable>
+    <number_ref display_value="AASL"/>
+  </sys_db_object>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_launchpad_run</name>
+    <element>instance_name</element>
+    <internal_type>string</internal_type>
+    <max_length>100</max_length>
+    <read_only>false</read_only>
+    <mandatory>false</mandatory>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_launchpad_run</name>
+    <element>release_target</element>
+    <internal_type>choice</internal_type>
+    <max_length>40</max_length>
+    <choice>1</choice>
+    <read_only>false</read_only>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_launchpad_run</name>
+    <element>overall_score</element>
+    <internal_type>integer</internal_type>
+    <max_length>40</max_length>
+    <read_only>false</read_only>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_launchpad_run</name>
+    <element>total_checks</element>
+    <internal_type>integer</internal_type>
+    <max_length>40</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_launchpad_run</name>
+    <element>pass_count</element>
+    <internal_type>integer</internal_type>
+    <max_length>40</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_launchpad_run</name>
+    <element>warn_count</element>
+    <internal_type>integer</internal_type>
+    <max_length>40</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_launchpad_run</name>
+    <element>fail_count</element>
+    <internal_type>integer</internal_type>
+    <max_length>40</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_launchpad_run</name>
+    <element>byok_provider_found</element>
+    <internal_type>string</internal_type>
+    <max_length>200</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_launchpad_run</name>
+    <element>estimated_hours_to_ready</element>
+    <internal_type>integer</internal_type>
+    <max_length>40</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_launchpad_run</name>
+    <element>report_html</element>
+    <internal_type>html</internal_type>
+    <max_length>4000</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_launchpad_run</name>
+    <element>report_json</element>
+    <internal_type>string</internal_type>
+    <max_length>4000</max_length>
+  </sys_dictionary>
+
+  <!-- x_aasl_prerequisite -->
+  <sys_db_object action="INSERT_OR_UPDATE">
+    <name>x_aasl_prerequisite</name>
+    <label>Prerequisite</label>
+    <extends_table></extends_table>
+    <namespace>x_aasl</namespace>
+    <create_access_controls>true</create_access_controls>
+    <is_extendable>false</is_extendable>
+  </sys_db_object>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_prerequisite</name>
+    <element>run_id</element>
+    <internal_type>reference</internal_type>
+    <max_length>32</max_length>
+    <reference>x_aasl_launchpad_run</reference>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_prerequisite</name>
+    <element>category</element>
+    <internal_type>choice</internal_type>
+    <max_length>40</max_length>
+    <choice>1</choice>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_prerequisite</name>
+    <element>name</element>
+    <internal_type>string</internal_type>
+    <max_length>200</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_prerequisite</name>
+    <element>expected_state</element>
+    <internal_type>string</internal_type>
+    <max_length>200</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_prerequisite</name>
+    <element>actual_state</element>
+    <internal_type>string</internal_type>
+    <max_length>200</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_prerequisite</name>
+    <element>status</element>
+    <internal_type>choice</internal_type>
+    <max_length>40</max_length>
+    <choice>1</choice>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_prerequisite</name>
+    <element>remediation_hint</element>
+    <internal_type>string</internal_type>
+    <max_length>4000</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_prerequisite</name>
+    <element>auto_fixable</element>
+    <internal_type>boolean</internal_type>
+    <max_length>40</max_length>
+  </sys_dictionary>
+
+  <!-- x_aasl_recommendation -->
+  <sys_db_object action="INSERT_OR_UPDATE">
+    <name>x_aasl_recommendation</name>
+    <label>Recommendation</label>
+    <extends_table></extends_table>
+    <namespace>x_aasl</namespace>
+    <create_access_controls>true</create_access_controls>
+  </sys_db_object>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_recommendation</name>
+    <element>run_id</element>
+    <internal_type>reference</internal_type>
+    <max_length>32</max_length>
+    <reference>x_aasl_launchpad_run</reference>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_recommendation</name>
+    <element>severity</element>
+    <internal_type>choice</internal_type>
+    <max_length>40</max_length>
+    <choice>1</choice>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_recommendation</name>
+    <element>title</element>
+    <internal_type>string</internal_type>
+    <max_length>200</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_recommendation</name>
+    <element>description</element>
+    <internal_type>string</internal_type>
+    <max_length>4000</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_recommendation</name>
+    <element>documentation_link</element>
+    <internal_type>url</internal_type>
+    <max_length>1024</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_recommendation</name>
+    <element>estimated_effort_hours</element>
+    <internal_type>integer</internal_type>
+    <max_length>40</max_length>
+  </sys_dictionary>
+
+  <!-- x_aasl_byok_provider -->
+  <sys_db_object action="INSERT_OR_UPDATE">
+    <name>x_aasl_byok_provider</name>
+    <label>BYOK Provider</label>
+    <extends_table></extends_table>
+    <namespace>x_aasl</namespace>
+    <create_access_controls>true</create_access_controls>
+  </sys_db_object>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_byok_provider</name>
+    <element>provider_name</element>
+    <internal_type>choice</internal_type>
+    <max_length>40</max_length>
+    <choice>1</choice>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_byok_provider</name>
+    <element>endpoint_url</element>
+    <internal_type>url</internal_type>
+    <max_length>1024</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_byok_provider</name>
+    <element>model_family</element>
+    <internal_type>string</internal_type>
+    <max_length>200</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_byok_provider</name>
+    <element>is_configured</element>
+    <internal_type>boolean</internal_type>
+    <max_length>40</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_byok_provider</name>
+    <element>last_tested</element>
+    <internal_type>glide_date_time</internal_type>
+    <max_length>40</max_length>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_byok_provider</name>
+    <element>test_result</element>
+    <internal_type>choice</internal_type>
+    <max_length>40</max_length>
+    <choice>1</choice>
+  </sys_dictionary>
+
+  <sys_dictionary action="INSERT_OR_UPDATE">
+    <name>x_aasl_byok_provider</name>
+    <element>error_log</element>
+    <internal_type>string</internal_type>
+    <max_length>4000</max_length>
+  </sys_dictionary>
+
+</unload>
